@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kenil.towersofhanoi.MainActivity"
+    android:background="#000000">
+
+
+    <TextView
+        android:id="@+id/message_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="Score: 0"
+        android:textColor="#ffffff"
+        android:textSize="28dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:textColor="#ffffff"
+        android:id="@+id/A"
+        android:textStyle="bold"
+        android:layout_marginLeft="32.5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A"
+        android:layout_below="@id/message_box"
+        android:textSize="24sp"
+        android:layout_alignStart="@+id/pole1"
+         />
+
+    <TextView
+        android:textColor="#ffffff"
+        android:id="@+id/B"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/message_box"
+        android:layout_centerHorizontal="true"
+        android:text="B"
+        android:textSize="24sp"
+         />
+
+    <TextView
+        android:textColor="#ffffff"
+        android:id="@+id/C"
+        android:textStyle="bold"
+        android:layout_marginRight="32.5dp"
+        android:layout_below="@id/message_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+
+        android:textSize="24sp"
+        android:layout_alignEnd="@+id/pole3"
+        />
+
+
+        <com.example.kenil.towersofhanoi.StackedLayout
+            android:id="@+id/pole1"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/A"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ffffff"
+            android:gravity="top"
+            android:minHeight="60dp"
+            android:orientation="vertical"
+            android:layout_toStartOf="@+id/pole2"
+            android:padding="10dp"
+            android:rotation="180"
+            android:layout_above="@+id/giveup"
+            />
+
+
+        <com.example.kenil.towersofhanoi.StackedLayout
+            android:id="@+id/pole2"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/B"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:background="#ffffff"
+            android:gravity="top"
+            android:minHeight="60dp"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_above="@+id/giveup"
+            android:rotation="180" />
+
+        <com.example.kenil.towersofhanoi.StackedLayout
+            android:id="@+id/pole3"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/C"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#ffffff"
+            android:gravity="top"
+            android:minHeight="60dp"
+            android:layout_toEndOf="@+id/pole2"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_above="@+id/giveup"
+            android:rotation="180" />
+
+    <Button
+        android:id="@+id/giveup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Give up"
+
+        />
+</RelativeLayout>
